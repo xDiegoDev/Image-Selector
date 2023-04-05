@@ -1,0 +1,23 @@
+.scroll--up {
+  display: block;
+  position: fixed;
+  bottom: 2.6rem;
+  right: 3.1rem;
+  color: white;
+  background-color: #252525;
+  z-index: 4000;
+  border: none;
+  border-radius: 100px;
+}
+
+.main--grid {
+  display: grid;
+  grid-template-columns: repeat(4, fr);
+  padding-bottom: 80px;
+}
+
+.grid--row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

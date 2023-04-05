@@ -1,0 +1,9 @@
+.card--flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.liked--cardgrid {
+  padding-bottom: 100px;
+}

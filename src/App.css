@@ -2,6 +2,12 @@
   text-align: center;
 }
 
+#root {
+  background-image: url("./images/white.jpg");
+  height: 100%;
+  font-family: Roboto;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

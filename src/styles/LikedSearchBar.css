@@ -1,0 +1,61 @@
+.div1 {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+}
+
+.div2 {
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+
+.div2 input {
+  padding: 20px;
+  border: none;
+  border-bottom: 3px solid #252525;
+  width: 100%;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+#filterId {
+  padding: 0.5rem;
+}
+
+.inputRounded {
+  background-color: white;
+  border: 1px solid black;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.div3 {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 15%;
+}
+
+button {
+  background-color: #252525;
+  border: none;
+  border-radius: 20px;
+  margin-left: 20px;
+  height: 50px;
+  width: 50px;
+}
+
+select {
+  background-color: #252525;
+  border: none;
+  border-radius: 20px;
+  margin-left: 20px;
+  height: 50px;
+  width: 100px;
+  color: white;
+}
