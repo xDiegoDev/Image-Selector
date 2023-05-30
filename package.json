@@ -2,7 +2,7 @@
   "name": "final-image-selector",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "http://xDiegoDev.github.io/Image-Selector",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
