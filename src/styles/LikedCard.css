@@ -4,28 +4,36 @@
   border-radius: 10px;
   margin: 10px;
   background-color: #252525;
-  height: 450px;
+  height: 530px;
   color: white;
   margin: 20px;
+  width: 350px;
 }
 
-.liked--images {
-  object-fit: cover;
+.liked--card div .liked--images {
+  width: 90%;
+  margin: auto;
   height: 300px;
-  width: 300px;
-  border: 3px solid white;
   border-radius: 10px;
+  margin-left: 4.5%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .info--div {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
+  margin: auto;
 }
 
-.description--div {
+.description {
   display: flex;
   justify-content: center;
+  width: 80%;
+  padding-left: 10%;
+  text-align: center;
 }
 
 .likes--div {
@@ -42,7 +50,7 @@
   margin: 6px;
   margin-left: 8px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 0px;
   margin-top: 13px;
 }
@@ -50,9 +58,11 @@
 .delete--download {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 94%;
   height: 100px;
   margin-top: 18px;
+  margin: auto;
+  margin-top: 20px;
 }
 
 .description {
@@ -60,4 +70,33 @@
   justify-content: center;
   align-items: center;
   margin: 5px;
+}
+
+.modal {
+  position: fixed;
+  background: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  margin: auto;
+  height: 100px;
+}
+
+.modal div textarea {
+  border-radius: 10px;
+  height: 60px;
+  width: 300px;
+  margin: auto;
+  margin-right: 20px;
+}
+
+.modal div {
+  display: flex;
+  align-items: center;
 }

@@ -47,7 +47,19 @@ const LikedCardGrid = () => {
           </Snackbar>
         </>
       ) : (
-        <h5>No liked pics</h5>
+        <h5
+          style={{
+            textAlign: "center",
+            fontFamily: "Roboto",
+            fontSize: "40px",
+            width: "40%",
+            margin: "auto",
+            marginTop: "10%",
+            padding: "10px 0",
+          }}
+        >
+          No liked pics
+        </h5>
       )}
     </>
   );

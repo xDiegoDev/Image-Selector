@@ -1,4 +1,4 @@
-import { Card as BasicCard, Box } from "@mui/material";
+import { Card as BasicCard, Box, Modal } from "@mui/material";
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
 import { useDispatch } from "react-redux";
 import { deleteFromLiked } from "../features/liked/likedSlice";
@@ -25,11 +25,7 @@ function LikedCard({ data }) {
 
   useEffect(() => {
     let rawDescription = data.description || data.alt_description || "";
-    let newDescription =
-      rawDescription.length > 25
-        ? `${rawDescription.slice(0, 25)}...`
-        : rawDescription;
-    setDescription(newDescription);
+    setDescription(rawDescription);
   }, [data.description, data.alt_description]);
 
   const dispatch = useDispatch();
@@ -61,61 +57,48 @@ function LikedCard({ data }) {
         />
       </div>
       <div className="info--div">
-        {!description ? (
-          <div className="description">
-            {open ? (
-              <>
-                <textarea
-                  value={""}
-                  onChange={handleDescriptionChange}
-                  placeholder={"No description available"}
-                />
-                <SaveIcon
-                  onClick={() => handleOpen(true)}
-                  style={{ cursor: "pointer", color: "white" }}
-                />
-              </>
-            ) : (
-              <>
-                {description}
-                <EditIcon
-                  onClick={() => handleOpen(true)}
-                  style={{ cursor: "pointer" }}
-                />
-              </>
-            )}
-          </div>
-        ) : (
-          <div className="description">
-            <div>
-              {open ? (
-                <>
-                  <textarea
-                    value={description}
-                    onChange={handleDescriptionChange}
-                  />
-                  <SaveIcon
-                    onClick={() => handleOpen()}
-                    style={{ cursor: "pointer", color: "white" }}
-                  />
-                </>
-              ) : (
-                <>
-                  {description}
-                  <EditIcon
-                    onClick={() => handleOpen()}
-                    style={{ cursor: "pointer" }}
-                  />
-                </>
-              )}
+        <div className="description">
+          {description ? (
+            <>
+              {description}
+              <EditIcon
+                onClick={() => handleOpen()}
+                style={{ cursor: "pointer", marginLeft: "30px" }}
+              />
+            </>
+          ) : (
+            <>
+              No description available
+              <EditIcon
+                onClick={() => handleOpen()}
+                style={{ cursor: "pointer" }}
+              />
+            </>
+          )}
+        </div>
+        <Modal
+          className="modal"
+          open={open}
+          onClose={handleOpen}
+          aria-labelledby="simple-modal-title"
+          aria-describedby="simple-modal-description"
+        >
+          <div>
+            <textarea
+              value={description}
+              onChange={handleDescriptionChange}
+              placeholder={"Enter a description..."}
+            />
+            <div
+              onClick={handleOpen}
+              style={{ cursor: "pointer", color: "white" }}
+            >
+              SAVE
             </div>
           </div>
-        )}
+        </Modal>
         <div className="photo--info--div">
           <div> Date: {formattedDate}</div>
-          <div>
-            {data.width} x {data.height}
-          </div>
           <div className="likes--div">
             {data.likes}
             <ThumbUpIcon
@@ -124,6 +107,7 @@ function LikedCard({ data }) {
           </div>
         </div>
       </div>
+
       <div className="delete--download">
         <CloudDownloadIcon
           sx={{ marginLeft: "3%", color: "white" }}
