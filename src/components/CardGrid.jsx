@@ -17,7 +17,6 @@ const ImageList = () => {
   const [likedPicsLength, setLikedPicsLength] = useState(likedPhotos.length);
 
   useEffect(() => {
-    console.log("UseEffect");
     dispatch(fetchRandomImages());
   }, [dispatch]);
 
@@ -54,14 +53,12 @@ const ImageList = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  // IMPORTAR COMPONENTES DE MUI
-
   return (
     <>
       <button className="scroll--up" onClick={handleClick}>
         <KeyboardArrowUpIcon />
       </button>
-      <div className="main--grid">
+      <div className="main--grid" style={{ marginBottom: "20px" }}>
         <div className="grid--row">
           {photos.map((item) => (
             <Card data={item} key={item.id} />

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import "../styles/LikedCardGrid.css";
 
 const LikedCardGrid = () => {
-  const likedPhotos = useSelector((state) => state.likedImg.list);
+  const likedPhotos = useSelector((state) => state.likedImg.filtered_list);
   const [likedPicsLength, setLikedPicsLength] = useState(likedPhotos.length);
   const [open, setOpen] = useState(false);
 
@@ -26,15 +26,10 @@ const LikedCardGrid = () => {
     setOpen(false);
   };
 
-  useEffect(() => {
-    console.log(`esto es likePiks ${likedPhotos}`);
-  }, [likedPhotos]);
-
   return (
     <>
       {likedPhotos.length > 0 ? (
         <>
-          {" "}
           <div className="liked--cardgrid">
             <div className="card--flex">
               {likedPhotos.map((item) => {
