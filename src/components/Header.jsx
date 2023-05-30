@@ -11,11 +11,11 @@ const Header = () => {
       </div> */}
       <div className="header--title">
         <h1>
-          <a href="/">PHALBUM</a>
+          <a href="/Image-Selector">PHALBUM</a>
         </h1>
         <h6>FIND YOUR STORY</h6>
       </div>
-      <a className="header--anchor" href="/liked">
+      <a className="header--anchor" href="/Image-Selector/liked">
         MY STORY
       </a>
     </header>

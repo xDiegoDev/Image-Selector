@@ -13,8 +13,8 @@ function App() {
         <Header />
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/liked" element={<Liked />} />
+            <Route path="/Image-Selector/" element={<Home />} />
+            <Route path="/Image-Selector/liked" element={<Liked />} />
           </Routes>
         </main>
         <Footer />
