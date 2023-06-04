@@ -5,12 +5,12 @@ import Liked from "./pages/Liked";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div id="root">
-      <Router>
+      <HashRouter>
         <Header />
         <main>
           <Routes>
@@ -19,7 +19,7 @@ function App() {
             <Route path="/liked" element={<Liked />} />
           </Routes>
         </main>
-      </Router>
+      </HashRouter>
     </div>
   );
 }
