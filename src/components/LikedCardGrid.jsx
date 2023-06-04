@@ -3,11 +3,18 @@ import LikedCard from "./LikedCard";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import "../styles/LikedCardGrid.css";
+import { useDispatch } from "react-redux";
+import { findPic } from "../features/liked/likedSlice";
 
 const LikedCardGrid = () => {
+  const dispatch = useDispatch();
   const likedPhotos = useSelector((state) => state.likedImg.filtered_list);
   const [likedPicsLength, setLikedPicsLength] = useState(likedPhotos.length);
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    dispatch(findPic(""));
+  }, []);
 
   useEffect(() => {
     console.log("esto es dentro del useffect");

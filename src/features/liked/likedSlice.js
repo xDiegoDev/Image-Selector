@@ -15,6 +15,7 @@ const LikedSlice = createSlice({
       if (!state.list.some((item) => item.id === payload.id)) {
         state.list.push(payload);
         localStorage.setItem("LikedItem", JSON.stringify(state.list));
+        state.filtered_list = [...state.list];
       }
     },
     deleteFromLiked: (state, { payload }) => {

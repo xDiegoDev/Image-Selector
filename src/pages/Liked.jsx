@@ -7,7 +7,7 @@ const Liked = () => {
   return (
     <>
       <LikedSearchBar />
-      <LikedCardGrid />
+      <LikedCardGrid style={{ zIndex: "1000" }} />
       <footer
         style={{
           position: "fixed",
@@ -19,6 +19,7 @@ const Liked = () => {
           background: "transparent",
           borderTop: "2px solid white",
           justifyContent: "space-between",
+          zIndex: "0",
         }}
       >
         <h3
