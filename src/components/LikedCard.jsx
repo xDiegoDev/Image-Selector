@@ -10,6 +10,8 @@ import EditIcon from "@mui/icons-material/Edit";
 import SaveIcon from "@mui/icons-material/Save";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import "../styles/LikedCard.css";
+import InfoIcon from "@mui/icons-material/Info";
+import { Info } from "@mui/icons-material";
 
 function LikedCard({ data }) {
   const [open, setOpen] = useState(false);
@@ -57,62 +59,112 @@ function LikedCard({ data }) {
         />
       </div>
       <div className="info--div">
-        <div className="description">
-          {description ? (
-            <>
-              {description}
-              <EditIcon
-                onClick={() => handleOpen()}
-                style={{ cursor: "pointer", marginLeft: "30px" }}
-              />
-            </>
-          ) : (
-            <>
-              No description available
-              <EditIcon
-                onClick={() => handleOpen()}
-                style={{ cursor: "pointer" }}
-              />
-            </>
-          )}
-        </div>
         <Modal
           className="modal"
           open={open}
           onClose={handleOpen}
           aria-labelledby="simple-modal-title"
           aria-describedby="simple-modal-description"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "transparent",
+            color: "white",
+          }}
         >
-          <div>
+          <div
+            style={{
+              width: "40%",
+              backgroundColor: "#101010",
+              padding: "80px 10px 50px 10px",
+              borderRadius: "10px",
+              border: "2px solid #565656",
+            }}
+          >
+            <h3
+              style={{
+                textAlign: "center",
+                marginBottom: "60px",
+                marginTop: "-30px",
+                letterSpacing: "3px",
+                fontSize: "25px",
+              }}
+            >
+              EDIT DESCRIPTION
+            </h3>
             <textarea
               value={description}
               onChange={handleDescriptionChange}
               placeholder={"Enter a description..."}
+              style={{
+                width: "80%",
+                margin: "auto",
+                height: "100px",
+                marginLeft: "10%",
+                marginBottom: "30px",
+                fontSize: "15px",
+              }}
             />
             <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gridGap: "20px",
+                marginBottom: "20px",
+              }}
+            >
+              <div style={{ marginLeft: "25px" }}>
+                <h6 style={{ marginLeft: "25px" }}>Likes:</h6>
+                <button style={{ width: "80%", backgroundColor: "white" }}>
+                  {data.likes}
+                </button>
+              </div>
+              <div>
+                <h6 style={{ marginLeft: "25px" }}>Saved On:</h6>
+                <button style={{ width: "80%", backgroundColor: "white" }}>
+                  {formattedDate}
+                </button>
+              </div>
+              <div style={{ marginLeft: "25px" }}>
+                <h6 style={{ marginLeft: "25px" }}>Height:</h6>
+                <button style={{ width: "80%", backgroundColor: "white" }}>
+                  {data.height}
+                </button>
+              </div>
+              <div>
+                <h6 style={{ marginLeft: "25px" }}>Width:</h6>
+                <button style={{ width: "80%", backgroundColor: "white" }}>
+                  {data.width}
+                </button>
+              </div>
+            </div>
+            <div
               onClick={handleOpen}
-              style={{ cursor: "pointer", color: "white" }}
+              style={{
+                cursor: "pointer",
+                backgroundColor: "#222",
+                width: "150px",
+                margin: "auto",
+                color: "white",
+                textAlign: "center",
+                marginTop: "80px",
+                padding: "15px",
+                borderRadius: "10px",
+                border: "2px solid #565656",
+              }}
             >
               SAVE
             </div>
           </div>
         </Modal>
-        <div className="photo--info--div">
-          <div> Date: {formattedDate}</div>
-          <div className="likes--div">
-            {data.likes}
-            <ThumbUpIcon
-              sx={{ marginLeft: "5px", color: "white", marginBottom: "4px" }}
-            />
-          </div>
-        </div>
       </div>
 
       <div className="delete--download">
-        <CloudDownloadIcon
+        <InfoIcon
           sx={{ marginLeft: "3%", color: "white" }}
           fontSize="large"
-          onClick={() => handleDownload(data.urls.raw)}
+          onClick={() => handleOpen()}
         />
 
         <div onClick={() => handleDeletePic(data.id)}>
