@@ -1,9 +1,10 @@
 import React from "react";
 import "./App.css";
-import Home from "./pages/Home";
+import Search from "./pages/Search";
 import Liked from "./pages/Liked";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -13,11 +14,11 @@ function App() {
         <Header />
         <main>
           <Routes>
-            <Route path="/Image-Selector/" element={<Home />} />
-            <Route path="/Image-Selector/liked" element={<Liked />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/liked" element={<Liked />} />
           </Routes>
         </main>
-        <Footer />
       </Router>
     </div>
   );

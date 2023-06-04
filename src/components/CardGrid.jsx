@@ -55,9 +55,6 @@ const ImageList = () => {
 
   return (
     <>
-      <button className="scroll--up" onClick={handleClick}>
-        <KeyboardArrowUpIcon />
-      </button>
       <div className="main--grid" style={{ marginBottom: "20px" }}>
         <div className="grid--row">
           {photos.map((item) => (
@@ -68,6 +65,10 @@ const ImageList = () => {
       <Snackbar open={open} onClose={handleClose} autoHideDuration={2000}>
         <Alert severity="success">Added to my likes!</Alert>
       </Snackbar>
+      <footer className="footer">
+        <h3>® 2023</h3>
+        <h3>DiegoDev</h3>
+      </footer>
     </>
   );
 };

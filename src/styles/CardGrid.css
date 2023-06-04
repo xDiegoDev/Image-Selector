@@ -1,10 +1,10 @@
 .scroll--up {
   display: block;
   position: fixed;
-  bottom: 2.6rem;
+  bottom: 3.6rem;
   right: 3.1rem;
   color: white;
-  background-color: #252525;
+  background-color: transparent;
   z-index: 4000;
   border: none;
   border-radius: 100px;

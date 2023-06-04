@@ -4,20 +4,24 @@ import "../styles/Header.css";
 const Header = () => {
   return (
     <header className="header">
-      {/* <div className="burger--icon">
+      <div className="burger--icon">
         <div></div>
         <div></div>
         <div></div>
-      </div> */}
+      </div>
       <div className="header--title">
         <h1>
-          <a href="/Image-Selector">PHALBUM</a>
+          <a href="/">PHALBUM</a>
         </h1>
-        <h6>FIND YOUR STORY</h6>
       </div>
-      <a className="header--anchor" href="/Image-Selector/liked">
-        MY STORY
-      </a>
+      <div className="nav--elts">
+        <a className="header--anchor" href="/search">
+          SEARCH
+        </a>
+        <a className="header--anchor" href="/liked">
+          MY LIKED
+        </a>
+      </div>
     </header>
   );
 };

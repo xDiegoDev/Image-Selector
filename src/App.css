@@ -3,7 +3,9 @@
 }
 
 #root {
-  background-image: url("./images/white.jpg");
+  background-image: url("./images/Blck.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
   font-family: Roboto;
 }

@@ -1,23 +1,30 @@
 .header {
   display: flex;
-  background: #252525;
+  background: transparent;
   color: white;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-family: Roboto;
   width: 100%;
   text-align: left;
   margin-bottom: 30px;
+  padding-top: 20px;
 }
 
 .header--title {
   text-align: center;
-  margin-right: 30%;
+  margin-left: 30px;
+}
+
+.nav--elts {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 150px;
 }
 
 .header h1 {
   font-size: 2em;
-  margin-top: 10px;
 }
 .header h1 a {
   text-decoration: none;
@@ -31,7 +38,6 @@
   font-size: 1.5rem;
   text-decoration: none;
   margin-bottom: 20px;
-  margin-top: 10px;
   margin-left: 1.3em;
 }
 .burger--icon {
@@ -43,6 +49,7 @@
 
 .burger--icon {
   margin-left: 5%;
+  display: none;
 }
 
 .burger--icon div {
@@ -57,6 +64,6 @@
   text-decoration: none;
   color: white;
   justify-content: right;
-  font-size: 2em;
+  font-size: 1.2em;
   font-weight: 500;
 }

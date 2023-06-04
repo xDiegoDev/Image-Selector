@@ -34,6 +34,7 @@ const LikedSearchBar = () => {
           className="inputRounded"
           onChange={handleChange}
           placeholder="Search Description"
+          style={{ color: "white" }}
         />
         <span>
           <button>

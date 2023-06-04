@@ -42,19 +42,69 @@ const LikedCardGrid = () => {
           </Snackbar>
         </>
       ) : (
-        <h5
+        <div
           style={{
+            color: "white",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
             textAlign: "center",
-            fontFamily: "Roboto",
-            fontSize: "40px",
+            alignItems: "center",
             width: "40%",
+            borderRadius: "10px",
+            padding: "30px",
             margin: "auto",
-            marginTop: "10%",
-            padding: "10px 0",
           }}
         >
-          No liked pics
-        </h5>
+          <h5
+            style={{
+              textAlign: "center",
+              fontFamily: "Roboto",
+              fontSize: "40px",
+              width: "100%",
+              margin: "auto",
+              padding: "10px 0",
+              color: "white",
+              marginTop: "30px",
+            }}
+          >
+            Your gallery is a blank canvas!{" "}
+          </h5>
+          <h6
+            style={{
+              fontSize: "25px",
+              fontWeight: "400",
+              paddingTop: "30px",
+              marginTop: "20px",
+            }}
+          >
+            Start painting your world with your favorite images
+          </h6>
+
+          <button
+            style={{
+              width: "290px",
+              margin: "auto",
+              marginTop: "20px",
+              backgroundColor: "white",
+              fontSize: "15px",
+              letterSpacing: "2px",
+              fontWeight: "100",
+              marginBottom: "10%",
+            }}
+          >
+            <a
+              style={{
+                color: "#222",
+                textDecoration: "none",
+                fontWeight: "600",
+              }}
+              href="/search"
+            >
+              DISCOVER
+            </a>
+          </button>
+        </div>
       )}
     </>
   );

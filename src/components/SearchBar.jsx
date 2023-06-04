@@ -42,6 +42,7 @@ const SearchBar = () => {
         type="text"
         placeholder="Search"
         className="input--search"
+        style={{ color: "white" }}
       />
       <button type="submit">
         <SearchIcon
