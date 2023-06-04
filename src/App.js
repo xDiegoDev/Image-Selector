@@ -15,8 +15,8 @@ function App() {
         <main>
           <Routes>
             <Route exact path="/Image-Selector" element={<Home />} />
-            <Route exact path="/Image/Selector/search" element={<Search />} />
-            <Route exact path="/Image/Selector/liked" element={<Liked />} />
+            <Route exact path="/Image-Selector/search" element={<Search />} />
+            <Route exact path="/Image-Selector/liked" element={<Liked />} />
           </Routes>
         </main>
       </HashRouter>
