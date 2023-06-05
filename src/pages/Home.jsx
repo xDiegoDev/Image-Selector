@@ -58,7 +58,7 @@ const Home = () => {
         }}
       >
         <a
-          href="/search"
+          href="/Image-Selector/search"
           style={{ textDecoration: "none", color: "#222", fontWeight: "600" }}
         >
           DISCOVER

@@ -5,21 +5,26 @@ import Liked from "./pages/Liked";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import {
+  HashRouter,
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
     <div id="root">
-      <HashRouter>
+      <Router>
         <Header />
         <main>
           <Routes>
-            <Route exact path="/Image-Selector" element={<Home />} />
-            <Route exact path="/Image-Selector/search" element={<Search />} />
-            <Route exact path="/Image-Selector/liked" element={<Liked />} />
+            <Route exact path="/" element={<Home />} />
+            <Route path="/Image-Selector/search" element={<Search />} />
+            <Route path="/Image-Selector/liked" element={<Liked />} />
           </Routes>
         </main>
-      </HashRouter>
+      </Router>
     </div>
   );
 }

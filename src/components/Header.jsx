@@ -15,10 +15,10 @@ const Header = () => {
         </h1>
       </div>
       <div className="nav--elts">
-        <a className="header--anchor" href="/search">
+        <a className="header--anchor" href="/Image-Selector/search">
           SEARCH
         </a>
-        <a className="header--anchor" href="/liked">
+        <a className="header--anchor" href="/Image-Selector/liked">
           MY LIKED
         </a>
       </div>
