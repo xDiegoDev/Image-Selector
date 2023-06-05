@@ -1,8 +1,9 @@
 {
+  "baseUrl": "http://localhost:3000",
   "name": "final-image-select",
   "version": "0.1.0",
+  "homepage": "http://XDiegoDev.github.io/Image-Selector",
   "private": true,
-  "homepage": "https://XDiegoDev.github.io/Image-Selector",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",

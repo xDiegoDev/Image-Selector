@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import "../styles/Header.css";
 
 const Header = () => {
@@ -11,16 +12,16 @@ const Header = () => {
       </div>
       <div className="header--title">
         <h1>
-          <a href="/">PHALBUM</a>
+          <Link to="/">PHALBUM</Link> {/* Change this */}
         </h1>
       </div>
       <div className="nav--elts">
-        <a className="header--anchor" href="/Image-Selector/search">
+        <Link className="header--anchor" to="/search">
           SEARCH
-        </a>
-        <a className="header--anchor" href="/Image-Selector/liked">
+        </Link>
+        <Link className="header--anchor" to="/liked">
           MY LIKED
-        </a>
+        </Link>
       </div>
     </header>
   );
