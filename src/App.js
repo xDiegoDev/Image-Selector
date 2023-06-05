@@ -15,13 +15,13 @@ import {
 function App() {
   return (
     <div id="root">
-      <Router>
+      <Router basename="Image-Selector">
         <Header />
         <main>
           <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/Image-Selector/search" element={<Search />} />
-            <Route path="/Image-Selector/liked" element={<Liked />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/liked" element={<Liked />} />
           </Routes>
         </main>
       </Router>
