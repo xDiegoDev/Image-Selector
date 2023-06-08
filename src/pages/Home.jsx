@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -57,12 +58,12 @@ const Home = () => {
           fontWeight: "100",
         }}
       >
-        <a
-          href="/Image-Selector/search"
+        <Link
+          to="search"
           style={{ textDecoration: "none", color: "#222", fontWeight: "600" }}
         >
           DISCOVER
-        </a>
+        </Link>
       </button>
       <footer
         style={{
@@ -72,7 +73,7 @@ const Home = () => {
           width: "100%",
           alignItems: "center",
           display: "flex",
-          background: "transparent",
+          background: "black",
           borderTop: "2px solid white",
           justifyContent: "space-between",
         }}

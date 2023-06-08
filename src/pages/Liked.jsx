@@ -16,7 +16,7 @@ const Liked = () => {
           width: "100%",
           alignItems: "center",
           display: "flex",
-          background: "transparent",
+          background: "black",
           borderTop: "2px solid white",
           justifyContent: "space-between",
           zIndex: "0",

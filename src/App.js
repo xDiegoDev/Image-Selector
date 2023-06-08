@@ -10,14 +10,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div id="root">
-      <BrowserRouter basename="/Image-Selector">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/liked" element={<Liked />} />
-        </Routes>
-      </BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/liked" element={<Liked />} />
+      </Routes>
     </div>
   );
 }
